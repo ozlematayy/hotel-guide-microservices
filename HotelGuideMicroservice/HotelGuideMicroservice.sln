@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelService.Api", "src\Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService.Api", "src\Services\ReportService\ReportService.Api\ReportService.Api.csproj", "{A2D6F6BB-F7D2-4041-8A5A-CDF96D047DEA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{2FB3E66B-7CE4-4DB5-B07F-2B4329450881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.UnitTest", "tests\BuildingBlocks\EventBus.UnitTest\EventBus.UnitTest.csproj", "{742729F4-DA17-424C-B575-CAA97FD117BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,10 @@ Global
 		{A2D6F6BB-F7D2-4041-8A5A-CDF96D047DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D6F6BB-F7D2-4041-8A5A-CDF96D047DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2D6F6BB-F7D2-4041-8A5A-CDF96D047DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742729F4-DA17-424C-B575-CAA97FD117BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742729F4-DA17-424C-B575-CAA97FD117BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742729F4-DA17-424C-B575-CAA97FD117BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742729F4-DA17-424C-B575-CAA97FD117BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +122,8 @@ Global
 		{DD9B3AF1-22D0-431C-929B-26405414B34E} = {70FCE29D-1BB2-4E71-A161-B1A95264A0F9}
 		{337B47E5-4006-4732-B4A4-57A1345A609C} = {70FCE29D-1BB2-4E71-A161-B1A95264A0F9}
 		{A2D6F6BB-F7D2-4041-8A5A-CDF96D047DEA} = {5B6415B8-125A-4E57-B09F-D15EA76310FB}
+		{2FB3E66B-7CE4-4DB5-B07F-2B4329450881} = {7AB7C089-B4C1-4E2B-ABA8-050A6A6615EA}
+		{742729F4-DA17-424C-B575-CAA97FD117BA} = {2FB3E66B-7CE4-4DB5-B07F-2B4329450881}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F251D1CA-A5E9-4243-8771-C645992484BA}
