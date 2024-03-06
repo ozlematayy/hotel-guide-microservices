@@ -1,4 +1,4 @@
-# Proje Adı
+# Hotel Guide Microservices Project
 
 - Projede kullanılan teknolojiler: .NET Core , SQL Server, RabbitMQ, Logging. 
 - Temelde 4 ana klasör içermektedir: ApiGateways, BuildingBlocks, Clients, Services.
