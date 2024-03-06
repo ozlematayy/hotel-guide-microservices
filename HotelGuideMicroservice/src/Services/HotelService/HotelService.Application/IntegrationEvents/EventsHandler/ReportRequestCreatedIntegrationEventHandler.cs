@@ -1,27 +1,39 @@
 ﻿using EventBus.Base.Abstraction;
-using ReportService.Api.IntegrationEvents.Events;
+using HotelService.Application.Features.Queries.Report.GenerateReportQuery;
+using HotelService.Application.IntegrationEvents.Events;
+using MediatR;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ReportService.Api.IntegrationEvents.EventHandlers
+namespace HotelService.Application.IntegrationEvents.EventsHandler
 {
     public class ReportRequestCreatedIntegrationEventHandler : IIntegrationEventHandler<ReportRequestCreatedIntegrationEvent>
     {
-        private readonly IConfiguration _configuration;
         private readonly IEventBus _eventBus;
         private readonly ILogger<ReportRequestCreatedIntegrationEventHandler> _logger;
-        public ReportRequestCreatedIntegrationEventHandler(IConfiguration configuration, IEventBus eventBus, ILogger<ReportRequestCreatedIntegrationEventHandler> logger)
+
+        public ReportRequestCreatedIntegrationEventHandler(IEventBus eventBus, ILogger<ReportRequestCreatedIntegrationEventHandler> logger)
         {
-            _configuration = configuration;
             _eventBus = eventBus;
             _logger = logger;
         }
 
-        public Task Handle(ReportRequestCreatedIntegrationEvent @event)
+
+        public async Task Handle(ReportRequestCreatedIntegrationEvent @event)
         {
+
             try
             {
                 if (@event.Status.Equals("Preparing", StringComparison.OrdinalIgnoreCase))
                 {
                     _logger.LogInformation($"Rapor talebi alındı - UUID: {@event.UUID}, Konum: {@event.Status}");
+
+                    //
 
                     @event.Status = "Done";
 
@@ -33,8 +45,6 @@ namespace ReportService.Api.IntegrationEvents.EventHandlers
                     };
                     _eventBus.Publish(preparedEvent);
                 }
-
-                return Task.CompletedTask;
             }
             catch (Exception ex)
             {
