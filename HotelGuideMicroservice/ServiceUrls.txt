@@ -1,0 +1,6 @@
+
+
+Web.ApiGateway          -> http://localhost:5000
+
+HotelService.Api      -> http://localhost:5001
+ReportService.Api        -> http://localhost:5002
